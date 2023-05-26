@@ -9,25 +9,15 @@ public class TriggerAnimationAnimancer : MonoBehaviour
 	public List<AnimationClip> clipsList;
 
 	public List<AvatarMask> masks;
-	
-	private List<List<AnimancerState>> animancerStates;
+
+	private int upper = -1, lower = -1;
 
 	private void Start()
 	{
-		animancerStates = new List<List<AnimancerState>> ();
 		for (int i = 0; i < masks.Count; i++)
 		{
 			animancerComponent.Layers[i].SetMask(masks[i]);
 			animancerComponent.Layers[i].SetDebugName($"Layer {i}");
-
-			List <AnimancerState> currentStates = new List<AnimancerState> ();
-
-			for (int j = 0; j < clipsList.Count; j++)
-			{
-				currentStates.Add(animancerComponent.Layers[i].GetOrCreateState(clipsList[j]));
-			}
-
-			animancerStates.Add(currentStates);
 		}
 
 		//animancerComponent.Play(clipsList[0]);
@@ -41,7 +31,26 @@ public class TriggerAnimationAnimancer : MonoBehaviour
 		//var l1 = 
 		int check = int.Parse($"{keys[0]}");
 		int check1 = int.Parse($"{keys[1]}");
-		animancerComponent.Layers[check].Play(animancerStates[check][check1]);
+		
+		if (check == 0 )
+		{
+			upper = check1;
+		}
+		else
+		{
+			lower = check1;
+		}
+
+		if (upper == lower )
+		{
+			animancerComponent.Layers[0].Play(clipsList[check]);
+			animancerComponent.Layers[1].Weight = 0;
+		}
+		else
+		{
+			animancerComponent.Layers[1].Weight = 1;
+			animancerComponent.Layers[check].Play(clipsList[check1]);
+		}
 		//animancerComponent.Layers[check].Play(clipsList[check1], 0f, FadeMode.FromStart);
 		//l1.Events.
 		//l1.Events.OnEnd += () =>
