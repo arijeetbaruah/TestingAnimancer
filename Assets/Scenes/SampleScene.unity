@@ -207,8 +207,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 297548836}
-        m_TargetAssemblyTypeName: TriggerAnimation, Assembly-CSharp
+      - m_Target: {fileID: 297548839}
+        m_TargetAssemblyTypeName: TriggerAnimationAnimancer, Assembly-CSharp
         m_MethodName: TriggerAnimation1
         m_Mode: 5
         m_Arguments:
@@ -216,7 +216,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Gangnam
+          m_StringArgument: 00
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &157313203
@@ -458,7 +458,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &297548834
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -466,7 +466,7 @@ Animator:
   m_GameObject: {fileID: 297548833}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: c6edd86bbcc8c5048a968a20d2d8ab7d, type: 3}
-  m_Controller: {fileID: 9100000, guid: 579d6391527b3484fab40dbc9234ae32, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -475,8 +475,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
---- !u!114 &297548836
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &297548838
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -485,10 +485,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 297548833}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57424ab930160f2408be2df5c2f00f66, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ad50f81b1d25c441943c37a89ba23f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 297548834}
+  _Animator: {fileID: 297548834}
+  _ActionOnDisable: 0
+--- !u!114 &297548839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297548833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b46706eaa686d498e0786a8cc9083a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animancerComponent: {fileID: 297548838}
+  clipsList:
+  - {fileID: 7400000, guid: 85460f12d26f88e4ba72f7e143caea9e, type: 2}
+  - {fileID: 7400000, guid: 5421e2d4dd000ed428d0866eedc4a161, type: 2}
+  masks:
+  - {fileID: 31900000, guid: cd05b8e5648941c4a9df1b9767f9bfb1, type: 2}
+  - {fileID: 31900000, guid: a46a62ab0b3116a4d91d7b77770b639f, type: 2}
 --- !u!1 &343823974
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,8 +593,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 297548836}
-        m_TargetAssemblyTypeName: TriggerAnimation, Assembly-CSharp
+      - m_Target: {fileID: 297548839}
+        m_TargetAssemblyTypeName: TriggerAnimationAnimancer, Assembly-CSharp
         m_MethodName: TriggerAnimation1
         m_Mode: 5
         m_Arguments:
@@ -582,7 +602,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Thriller
+          m_StringArgument: 01
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &343823977
@@ -1599,8 +1619,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 297548836}
-        m_TargetAssemblyTypeName: TriggerAnimation, Assembly-CSharp
+      - m_Target: {fileID: 297548839}
+        m_TargetAssemblyTypeName: TriggerAnimationAnimancer, Assembly-CSharp
         m_MethodName: TriggerAnimation1
         m_Mode: 5
         m_Arguments:
@@ -1608,7 +1628,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Thriller L
+          m_StringArgument: 11
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1103821111
@@ -1879,8 +1899,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 297548836}
-        m_TargetAssemblyTypeName: TriggerAnimation, Assembly-CSharp
+      - m_Target: {fileID: 297548839}
+        m_TargetAssemblyTypeName: TriggerAnimationAnimancer, Assembly-CSharp
         m_MethodName: TriggerAnimation1
         m_Mode: 5
         m_Arguments:
@@ -1888,7 +1908,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Gangnam L
+          m_StringArgument: 10
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1213935101
